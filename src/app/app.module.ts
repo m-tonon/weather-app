@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LowerDataComponent } from './lower-data/lower-data.component';
+import { UpperDataComponent } from './upper-data/upper-data.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LowerDataComponent,
+    UpperDataComponent
   ],
   imports: [
     BrowserModule,
