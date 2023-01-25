@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LowerDataComponent } from './lower-data/lower-data.component';
 import { UpperDataComponent } from './upper-data/upper-data.component';
 import { HttpClientModule } from '@angular/common/http';
+import { WeatherService } from './services/weather.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

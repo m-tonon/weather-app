@@ -1,4 +1,42 @@
-<div class="lower-data">
+<div class="lower-data" *ngIf="weatherData">
+  <div class="more-info-label">More Information</div>
+  <div class="more-info-container">
+    <div class="info-block">
+      <div class="info-block-label">
+        <img src="../assets/img/cold.png" alt="" />
+        <span>min</span>
+      </div>
+      <div class="info-block-value">{{ weatherData.mintemp_c }}°C</div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-block-label">
+        <img src="../assets/img/hot.png" alt="" />
+        <span>max</span>
+      </div>
+      <div class="info-block-value">{{ weatherData.maxtemp_c }}°C</div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-block-label">
+        <img src="../assets/img/humidity.png" alt="" />
+        <span>humidity</span>
+      </div>
+      <div class="info-block-value">{{ weatherData.humidity }}</div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-block-label">
+        <img src="../assets/img/wind.png" alt="" />
+        <span>wind</span>
+      </div>
+      <div class="info-block-value">{{ weatherData.wind_kph }}</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- <div class="lower-data">
   <div class="more-info-label">More Information</div>
   <div class="more-info-container">
     <div class="info-block">
@@ -32,6 +70,6 @@
       </div>
       <div class="info-block-value">11 km/h</div>
     </div>
-    
+
   </div>
-</div>
+</div> -->

@@ -1,54 +1,61 @@
 export interface WeatherData {
-  coord: Coord
-  weather: Weather[]
-  base: string
-  main: Main
-  visibility: number
-  wind: Wind
-  clouds: Clouds
-  dt: number
-  sys: Sys
-  timezone: number
-  id: number
+  location: Location
+  current: Current
+  forecast: Forecast
+}
+
+export interface Location {
   name: string
-  cod: number
-}
-
-export interface Coord {
-  lon: number
-  lat: number
-}
-
-export interface Weather {
-  id: number
-  main: string
-  description: string
-  icon: string
-}
-
-export interface Main {
-  temp: number
-  feels_like: number
-  temp_min: number
-  temp_max: number
-  pressure: number
-  humidity: number
-  sea_level: number
-  grnd_level: number
-}
-
-export interface Wind {
-  speed: number
-  deg: number
-  gust: number
-}
-
-export interface Clouds {
-  all: number
-}
-
-export interface Sys {
+  region: string
   country: string
-  sunrise: number
-  sunset: number
+  lat: number
+  lon: number
+  tz_id: string
+  localtime_epoch: number
+  localtime: string
 }
+
+export interface Current {
+  temp_c: number
+  condition: Condition
+  wind_kph: number
+  humidity: number
+  uv: number
+}
+
+export interface Condition {}
+
+export interface Forecast {
+  forecastday: Forecastday[]
+}
+
+export interface Forecastday {
+  day: Day
+  astro: Astro
+  hour: Hour[]
+}
+
+export interface Day {
+  maxtemp_c: number
+  mintemp_c: number
+  avgtemp_c: number
+  maxwind_kph: number
+  totalsnow_cm: number
+  avgvis_km: number
+  avghumidity: number
+  condition: Condition2
+}
+
+export interface Condition2 {}
+
+export interface Astro {}
+
+export interface Hour {
+  temp_c: number
+  temp_f: number
+  condition: Condition3
+  wind_kph: number
+  humidity: number
+}
+
+export interface Condition3 {}
