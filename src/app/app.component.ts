@@ -8,7 +8,7 @@ import { WeatherService } from './services/weather.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  @Input() weatherData?: WeatherData;
+  weatherData?: WeatherData;
 
   constructor(private weatherService: WeatherService) {}
 
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
       next: (response) => {
         this.weatherData = response;
 
-        console.log(response);
+        console.log(this.weatherData);
       }
     })
 

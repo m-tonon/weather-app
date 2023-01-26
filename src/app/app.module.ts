@@ -19,7 +19,7 @@ import { WeatherService } from './services/weather.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [WeatherService],
+  providers: [WeatherService, AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

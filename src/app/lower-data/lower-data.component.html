@@ -6,7 +6,7 @@
         <img src="../assets/img/cold.png" alt="" />
         <span>min</span>
       </div>
-      <div class="info-block-value">{{ weatherData.day.mintemp_c }}°C</div>
+      <div class="info-block-value">{{ weatherData.forecast.forecastday[0].day.mintemp_c }}°C</div>
     </div>
 
     <div class="info-block">
@@ -14,7 +14,7 @@
         <img src="../assets/img/hot.png" alt="" />
         <span>max</span>
       </div>
-      <div class="info-block-value">{{ weatherData.day.maxtemp_c }}°C</div>
+      <div class="info-block-value">{{ weatherData.forecast.forecastday[0].day.maxtemp_c }}°C</div>
     </div>
 
     <div class="info-block">

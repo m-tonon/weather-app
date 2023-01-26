@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherData } from '../models/weather.model';
 import { WeatherService } from '../services/weather.service';
+import {AppComponent} from '../app.component';
 
 @Component({
   selector: 'app-lower-data',
@@ -8,13 +9,13 @@ import { WeatherService } from '../services/weather.service';
   styleUrls: ['./lower-data.component.css']
 })
 export class LowerDataComponent implements OnInit {
-  weatherData?: WeatherData;
+  weatherData?: WeatherData = this.appComponent.weatherData
 
-  constructor(private weatherService: WeatherService) {}
+  constructor (private appComponent: AppComponent) {
+
+  }
 
   ngOnInit(): void {
 
   }
-
-
 }
