@@ -7,6 +7,7 @@ import { LowerDataComponent } from './lower-data/lower-data.component';
 import { UpperDataComponent } from './upper-data/upper-data.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherService } from './services/weather.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { WeatherService } from './services/weather.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [WeatherService, AppComponent],
   bootstrap: [AppComponent]

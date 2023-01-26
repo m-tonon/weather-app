@@ -17,6 +17,5 @@ export class WeatherService {
           .set('key', environment.weatherKey)
           .set('q', cityName)
         })
-
   }
 }
