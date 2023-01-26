@@ -1,9 +1,9 @@
 <div class="upper-data" *ngIf="weatherData">
-  <img src="../assets/img/day.png" *ngIf="weatherData.maxtemp_c > 15">
-  <img src="../assets/img/night.png" *ngIf="weatherData.mintemp_c < 15" >
+  <img src="../assets/img/day.png" *ngIf="weatherData.day.maxtemp_c > 15">
+  <img src="../assets/img/night.png" *ngIf="weatherData.day.mintemp_c < 15" >
   <div class="weather-data">
     <div class="location">{{ weatherData.location.name }}</div>
-    <div class="temperature"> {{ weatherData.temp_c | number: '1.0-0' }} °C</div>
+    <div class="temperature"> {{ weatherData.current.temp_c | number: '1.0-0' }} °C</div>
   </div>
 </div>
 

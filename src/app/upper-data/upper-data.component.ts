@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { WeatherData } from '../models/weather.model';
 import { WeatherService } from '../services/weather.service';
 
@@ -7,10 +7,11 @@ import { WeatherService } from '../services/weather.service';
   templateUrl: './upper-data.component.html',
   styleUrls: ['./upper-data.component.css']
 })
-export class UpperDataComponent {
-  weatherData?: WeatherData;
+export class UpperDataComponent  implements OnInit {
+  @Output() weatherData?: WeatherData;
 
-  constructor(private weatherService: WeatherService) {}
-
+  ngOnInit(): void {
+    
+  }
 
 }

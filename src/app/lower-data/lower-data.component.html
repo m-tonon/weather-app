@@ -6,7 +6,7 @@
         <img src="../assets/img/cold.png" alt="" />
         <span>min</span>
       </div>
-      <div class="info-block-value">{{ weatherData.mintemp_c }}°C</div>
+      <div class="info-block-value">{{ weatherData.day.mintemp_c }}°C</div>
     </div>
 
     <div class="info-block">
@@ -14,7 +14,7 @@
         <img src="../assets/img/hot.png" alt="" />
         <span>max</span>
       </div>
-      <div class="info-block-value">{{ weatherData.maxtemp_c }}°C</div>
+      <div class="info-block-value">{{ weatherData.day.maxtemp_c }}°C</div>
     </div>
 
     <div class="info-block">
@@ -22,7 +22,7 @@
         <img src="../assets/img/humidity.png" alt="" />
         <span>humidity</span>
       </div>
-      <div class="info-block-value">{{ weatherData.humidity }}</div>
+      <div class="info-block-value">{{ weatherData.current.humidity }}</div>
     </div>
 
     <div class="info-block">
@@ -30,7 +30,7 @@
         <img src="../assets/img/wind.png" alt="" />
         <span>wind</span>
       </div>
-      <div class="info-block-value">{{ weatherData.wind_kph }}</div>
+      <div class="info-block-value">{{ weatherData.current.wind_kph }}</div>
     </div>
 
   </div>

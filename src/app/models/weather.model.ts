@@ -2,6 +2,7 @@ export interface WeatherData {
   location: Location
   current: Current
   forecast: Forecast
+  day: Day
 }
 
 export interface Location {
