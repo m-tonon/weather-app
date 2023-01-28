@@ -8,6 +8,7 @@ import { WeatherData } from '../models/weather.model';
   providedIn: 'root'
 })
 export class WeatherService {
+  cityName: string = 'Maringa';
 
   constructor(private http: HttpClient) { }
 
@@ -17,5 +18,10 @@ export class WeatherService {
           .set('key', environment.weatherKey)
           .set('q', cityName)
         })
+  }
+
+  getCityName() {
+    console.log('The city entered is --' + this.cityName);
+    return this.cityName
   }
 }

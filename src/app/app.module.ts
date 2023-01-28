@@ -3,17 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LowerDataComponent } from './lower-data/lower-data.component';
-import { UpperDataComponent } from './upper-data/upper-data.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherService } from './services/weather.service';
 import { FormsModule } from '@angular/forms';
+import { WeatherDataComponent } from './weather-data/weather-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LowerDataComponent,
-    UpperDataComponent
+    WeatherDataComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +19,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [WeatherService, AppComponent],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

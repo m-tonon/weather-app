@@ -1,10 +1,9 @@
 <div class="container" >
-  <form action="">
+  <form>
     <label for="city-name">Type your city name:</label>
-    <input type="text" name="city-name" [(ngModel)]="cityName" >
-    <button type="submit" (click)="getCityName()">OK</button>
+    <input type="text" name="city-name" >
+    <button type="submit" >OK</button>
   </form>
-  <app-upper-data *ngIf="weatherData"></app-upper-data>
-  <app-lower-data *ngIf="weatherData"></app-lower-data>
+  <app-weather-data></app-weather-data>
 </div>
 <router-outlet></router-outlet>
