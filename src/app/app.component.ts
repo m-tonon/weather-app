@@ -7,7 +7,6 @@ import { WeatherData } from './models/weather.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  weatherData?: WeatherData;
 
   constructor() {}
 

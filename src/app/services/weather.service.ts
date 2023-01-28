@@ -19,9 +19,4 @@ export class WeatherService {
           .set('q', cityName)
         })
   }
-
-  getCityName() {
-    console.log('The city entered is --' + this.cityName);
-    return this.cityName
-  }
 }

@@ -14,11 +14,21 @@ export class WeatherDataComponent implements OnInit {
   constructor (private weatherService: WeatherService) {}
 
   ngOnInit(): void {
-    this.weatherService.getWeatherData(this.cityName)
+    this.getWeatherData(this.cityName);
+    this.cityName = '';
+  }
+
+  private getWeatherData(cityName: string) {
+    this.weatherService.getWeatherData(cityName)
     .subscribe({
       next: (response) => {
         this.weatherData = response;
       }
     })
+  }
+
+  getCityName() {
+    this.getWeatherData(this.cityName);
+    this.cityName = '';
   }
 }

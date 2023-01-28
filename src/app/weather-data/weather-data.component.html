@@ -1,3 +1,10 @@
+<div class="search">
+  <form #form="ngForm" (submit)="getCityName()">
+    <input type="text" placeholder="Search city" name="city" [(ngModel)]="cityName">
+  </form>
+</div>
+
+<div class="container" >
 <div class="upper-data" *ngIf="weatherData">
   <img src="../assets/img/day.png" *ngIf="weatherData.forecast.forecastday[0].day.maxtemp_c > 15">
   <img src="../assets/img/night.png" *ngIf="weatherData.forecast.forecastday[0].day.mintemp_c < 15" >
@@ -15,7 +22,7 @@
         <img src="../assets/img/cold.png" alt="" />
         <span>min</span>
       </div>
-      <div class="info-block-value">{{ weatherData.forecast.forecastday[0].day.mintemp_c }}°C</div>
+      <div class="info-block-value">{{ weatherData.forecast.forecastday[0].day.mintemp_c | number: '1.0-0' }}°C</div>
     </div>
 
     <div class="info-block">
@@ -23,7 +30,7 @@
         <img src="../assets/img/hot.png" alt="" />
         <span>max</span>
       </div>
-      <div class="info-block-value">{{ weatherData.forecast.forecastday[0].day.maxtemp_c }}°C</div>
+      <div class="info-block-value">{{ weatherData.forecast.forecastday[0].day.maxtemp_c | number: '1.0-0' }}°C</div>
     </div>
 
     <div class="info-block">
@@ -31,7 +38,7 @@
         <img src="../assets/img/humidity.png" alt="" />
         <span>humidity</span>
       </div>
-      <div class="info-block-value">{{ weatherData.current.humidity }}</div>
+      <div class="info-block-value">{{ weatherData.current.humidity }} %</div>
     </div>
 
     <div class="info-block">
@@ -39,12 +46,12 @@
         <img src="../assets/img/wind.png" alt="" />
         <span>wind</span>
       </div>
-      <div class="info-block-value">{{ weatherData.current.wind_kph }}</div>
+      <div class="info-block-value">{{ weatherData.current.wind_kph }} km/h</div>
     </div>
 
   </div>
 </div>
-
+</div>
 
 <!-- ----------------------- -->
 <!-- <div class="upper-data">
