@@ -3,15 +3,14 @@
     <input type="text" placeholder="Search city" name="city" [(ngModel)]="cityName">
   </form>
 </div>
-
 <div class="container" >
-<div class="upper-data" *ngIf="weatherData">
-  <img src="../assets/img/day.png" *ngIf="weatherData.forecast.forecastday[0].day.maxtemp_c > 15">
-  <img src="../assets/img/night.png" *ngIf="weatherData.forecast.forecastday[0].day.mintemp_c < 15" >
-  <div class="weather-data">
-    <div class="location">{{ weatherData.location.name }}</div>
-    <div class="temperature"> {{ weatherData.current.temp_c | number: '1.0-0' }} °C</div>
-  </div>
+  <div class="upper-data" *ngIf="weatherData">
+    <img src="../assets/img/day.png" *ngIf="weatherData.forecast.forecastday[0].day.maxtemp_c > 15">
+    <img src="../assets/img/night.png" *ngIf="weatherData.forecast.forecastday[0].day.maxtemp_c < 15" >
+    <div class="weather-data">
+      <div class="location">{{ weatherData.location.name }}</div>
+      <div class="temperature"> {{ weatherData.current.temp_c | number: '1.0-0' }} °C</div>
+    </div>
 </div>
 
 <div class="lower-data" *ngIf="weatherData">
